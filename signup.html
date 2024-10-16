@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neuron Academy</title>
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+    <body>
+
+        <div class="flex justify-center items-center min-h-screen bg-gray-100">
+            <form class="bg-white p-6 rounded-lg shadow-md w-full max-w-md" method="post">                       
+              <h2 class="text-2xl font-bold mb-6 text-center">সাইন আপ</h2>
+      
+              <div class="mb-4">
+                <label htmlFor="name" class="block text-sm font-medium text-gray-700">নাম</label>
+                <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="আপনার নাম লিখুন" required />                  
+              </div>
+      
+
+              <div class="mb-4">
+                <label htmlFor="phone" class="block text-sm font-medium text-gray-700">ফোন নাম্বার</label>
+                <input type="number" id="phone" name="phone" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="ফোন নাম্বার দিন" required />    
+              </div>
+      
+              <div class="mb-4">
+                <label htmlFor="email" class="block text-sm font-medium text-gray-700">
+                  ইমেইল
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  placeholder="আপনার ইমেইল দিন"
+                />
+              </div>
+      
+              {/* Password */}
+              <div class="mb-6">
+                <label htmlFor="password" class="block text-sm font-medium text-gray-700">
+                  পাসওয়ার্ড
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  placeholder="পাসওয়ার্ড দিন"
+                />
+              </div>
+      
+              {/* Submit Button */}
+              <button
+                type="submit"
+                class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+              >
+                সাইন আপ
+              </button>
+            </form>
+            
+          </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
